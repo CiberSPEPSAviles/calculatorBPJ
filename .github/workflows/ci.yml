@@ -31,3 +31,6 @@ jobs:
 
       - name: Compilación
         run: ./gradlew compileJava
+
+      - name: Prueba Unitaria
+        run: ./gradlew test
