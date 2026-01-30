@@ -34,3 +34,9 @@ jobs:
 
       - name: Pruebas unitarias
         run: ./gradlew test
+        
+      - name: Se sube el informe
+        uses: actions/upload-artifact@v3 
+        with: 
+          name: test-report 
+          path: build/reports/tests/test
