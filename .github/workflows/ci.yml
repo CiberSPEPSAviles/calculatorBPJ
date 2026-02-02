@@ -46,5 +46,9 @@ jobs:
       
       - name: Cobertura de codigo - Informes
         run: ./gradlew jacocoTestReport
-        
+      
+      - name: Subida de informe a Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: build/reports/jacoco/test/jacocoTestReport.xml
       
