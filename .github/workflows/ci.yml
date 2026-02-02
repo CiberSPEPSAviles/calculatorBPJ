@@ -40,3 +40,11 @@ jobs:
         with: 
           name: test-report 
           path: build/reports/tests/test
+
+      - name: Cobertura de codigo
+        run: ./gradlew jacocoTestCoverageVerification
+      
+      - name: Cobertura de codigo - Informes
+        run: ./gradlew jacocoTestReport
+        
+      
